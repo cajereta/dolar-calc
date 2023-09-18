@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  background-color: white;
+}
+
+.dark {
+  background-color: #111827;
+}
+
+body {
+  padding: 10px;
+  margin: 10px
+}
+
+
+#root {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: 6em;
+}
