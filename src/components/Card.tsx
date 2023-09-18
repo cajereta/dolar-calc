@@ -32,12 +32,12 @@ const CardRow = ({ dolar, impPais, impGanan, total, isLoading = false }: CardPro
             <li className="py-3 sm:py-4 " key={keys[i]}>
               <div className="flex space-x-4 justify-between">
                 <div className="min-w-0">
-                  <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                  <p className="truncate text-left text-sm font-medium text-gray-900 dark:text-white">
                     {labels[i]}
                   </p>
                 </div>
                 <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                  {v != 0 ? `$${v as number}` : "-"}
+                  {v != 0 ? `${new Intl.NumberFormat("es-AR", { style: 'currency', currency: 'ARS' }).format(v)}` : "-"}
                 </div>
               </div>
             </li>))}
@@ -49,7 +49,7 @@ const CardRow = ({ dolar, impPais, impGanan, total, isLoading = false }: CardPro
                 </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                {dolar != 0 ? `1 USD = $${dolar as number}` : "-"}
+                {dolar != 0 ? `1 USD = $ ${dolar as number}` : "-"}
               </div>
             </div>
           </li>

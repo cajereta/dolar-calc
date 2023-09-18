@@ -19,8 +19,9 @@ const NavBar = () => {
 
 
 function App() {
+  const initialMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
   return (
-    <Flowbite>
+    <Flowbite theme={{ dark: initialMode }}>
       <NavBar />
       <Form />
       <AccordionDolar />

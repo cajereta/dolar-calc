@@ -36,9 +36,9 @@ const Form = () => {
     setValueUser(Number(value));
   };
 
-  const impuestoPais = Number((valueUser * dolar * 0.3).toFixed(2))
-  const impuestoGanancias = Number((valueUser * dolar * 0.45).toFixed(2))
-  const total = Number((valueUser * dolar + impuestoPais + impuestoGanancias).toFixed(2))
+  const impuestoPais = Number((valueUser * dolar * 0.3))
+  const impuestoGanancias = Number((valueUser * dolar * 0.45))
+  const total = Number(valueUser * dolar + impuestoPais + impuestoGanancias)
 
   return (
     <>
